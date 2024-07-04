@@ -1,1 +1,62 @@
-/* You can add global styles to this file, and also import other style files */
+@import "bootstrap/dist/css/bootstrap.css";
+header {
+  background-color: blueviolet;
+  display: flex;
+  align-items: center;
+}
+header span {
+  margin-left: 20px;
+  font-size: 35px;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px #ff0000;
+}
+main{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+form{
+  border: 2px solid black;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+  padding: 30px;
+  gap: 1rem;
+  margin: 10px;
+  box-shadow: 0 4px 8px rgb(121, 52, 163);
+  animation: lefttoright 1s ease-out;
+}
+@keyframes lefttoright {
+  0%{
+    transform: translateX(-100%);
+  }
+  100%{
+    transform: translateX(0);
+  }
+}
+form textarea{
+  overflow: scroll;
+  box-shadow: 0 4px 8px rgb(121, 52, 163);
+}
+form label{
+  font-size: 25px;
+  font-weight:600;
+  text-shadow: 2px 1px 1px grey;
+}
+form label:hover{
+  color: grey;
+  -webkit-text-stroke: 1px black;
+}
+form input[type="text"],form input[type="date"]{
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgb(121, 52, 163);
+}
+
+

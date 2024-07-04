@@ -1,0 +1,40 @@
+<header><span>Task Scheluder</span></header>
+<main>
+  <form (ngSubmit)="save()" #f="ngForm">
+    <table>
+      <tr>
+        <td><label for="title">Title</label></td>
+        <td><input type="text" id="title" name="title" [(ngModel)]="taskdetails.title" required minlength="5" maxlength="50" #t="ngModel" class="form-control"></td>
+      </tr>
+      <tr>
+        <td colspan="2" align="center"><div *ngIf="t.invalid && (t.touched||t.dirty)">
+          <p *ngIf="t.errors?.['required']">Please Enter Title</p>
+          <p *ngIf="t.errors?.['minlength']">Please Enter At Least 5 Characters</p>
+          <p *ngIf="t.errors?.['maxlength']">Your Title Must Be Within 50 Characters</p>
+        </div></td>
+      </tr>
+      <tr>
+        <td><label for="date">Date</label></td>
+        <td><input type="date" name="date" id="date" required class="form-control" [(ngModel)]="taskdetails.date" #da="ngModel"></td>
+      </tr>
+      <tr>
+        <td colspan="2" align="center"><div *ngIf="da.invalid && (da.touched||da.dirty)">
+          <p *ngIf="da.errors?.['required']">Please Choose Date</p>
+        </div></td>
+      </tr>
+      <tr>
+        <td><label for="description">Description&nbsp;&nbsp;&nbsp;&nbsp;</label></td>
+        <textarea id="description" name="description" [(ngModel)]="taskdetails.description" required minlength="5" maxlength="200" #d="ngModel" class="form-control"></textarea>
+      </tr>
+      <tr>
+        <td colspan="2" align="center"><div *ngIf="d.invalid && (d.touched||d.dirty)">
+          <p *ngIf="d.errors?.['required']">Please Enter Description</p>
+          <p *ngIf="d.errors?.['minlength']">Please Enter At Least 5 Characters</p>
+          <p *ngIf="d.errors?.['maxlength']">Your Description Must Be Within 200 Characters</p>
+        </div></td>
+      </tr>
+    </table>
+    <input type="submit" value="Add Task" class="btn btn-success" [disabled]="f.invalid">
+  </form>
+  <a routerLink="/viewTask" class="btn btn-dark">&#8592;&nbsp;Back To View Task</a>
+</main>

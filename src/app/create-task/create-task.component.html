@@ -4,7 +4,7 @@
     <table>
       <tr>
         <td><label for="title">Title</label></td>
-        <td><input type="text" id="title" name="title" [(ngModel)]="taskdetails.title" required minlength="5" maxlength="50" #t="ngModel" class="form-control"></td>
+        <td><input type="text" id="title" name="title" [(ngModel)]="taskdetails.title" required minlength="5" maxlength="50" #t="ngModel" class="form-control" autocomplete="off"></td>
       </tr>
       <tr>
         <td colspan="2" align="center"><div *ngIf="t.invalid && (t.touched||t.dirty)">
@@ -15,7 +15,7 @@
       </tr>
       <tr>
         <td><label for="date">Date</label></td>
-        <td><input type="date" name="date" id="date" required class="form-control" [(ngModel)]="taskdetails.date" #da="ngModel"></td>
+        <td><input type="date" name="date" id="date" required class="form-control" [(ngModel)]="taskdetails.date" #da="ngModel" autocomplete="off"></td>
       </tr>
       <tr>
         <td colspan="2" align="center"><div *ngIf="da.invalid && (da.touched||da.dirty)">
@@ -24,7 +24,7 @@
       </tr>
       <tr>
         <td><label for="description">Description&nbsp;&nbsp;&nbsp;&nbsp;</label></td>
-        <textarea id="description" name="description" [(ngModel)]="taskdetails.description" required minlength="5" maxlength="200" #d="ngModel" class="form-control"></textarea>
+        <textarea id="description" name="description" [(ngModel)]="taskdetails.description" required minlength="5" maxlength="200" #d="ngModel" class="form-control" autocomplete="off"></textarea>
       </tr>
       <tr>
         <td colspan="2" align="center"><div *ngIf="d.invalid && (d.touched||d.dirty)">

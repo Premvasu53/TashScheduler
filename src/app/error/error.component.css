@@ -1,0 +1,38 @@
+div{
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: slowshow 1s ease-in;
+}
+aside span{
+  font-weight: bold;
+  font-size: 50px;
+}
+aside span:first-child{
+  background-color: red;
+  border-radius: 50%;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 5px;
+  text-shadow: 2px 2px 2px grey;
+}
+@keyframes slowshow {
+  0%{
+    opacity: 0;
+  }
+  25%{
+    opacity: 0.25;
+  }
+  50%{
+    opacity: 0.50;
+  }
+  75%{
+    opacity: 0.75;
+  }
+  100%{
+    opacity: 1;
+  }
+}

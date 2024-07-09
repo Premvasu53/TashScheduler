@@ -7,13 +7,15 @@ import { ViewTaskComponent } from './view-task/view-task.component';
 import { UpdateTaskComponent } from './update-task/update-task.component';
 import { CreateTaskComponent } from './create-task/create-task.component';
 import { FormsModule } from '@angular/forms';
+import { ErrorComponent } from './error/error.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ViewTaskComponent,
     UpdateTaskComponent,
-    CreateTaskComponent
+    CreateTaskComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,

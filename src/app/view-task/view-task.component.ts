@@ -17,7 +17,7 @@ export class ViewTaskComponent {
   }
   deleteTask(id:any){
     this.sv.deleteTask(id).subscribe(()=>{
-      this.rt.navigate(["/viewTask"]);
+      location.reload();
     });
   }
   togsec(){

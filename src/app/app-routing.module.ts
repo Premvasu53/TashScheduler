@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ViewTaskComponent } from './view-task/view-task.component';
 import { CreateTaskComponent } from './create-task/create-task.component';
 import { UpdateTaskComponent } from './update-task/update-task.component';
+import { ErrorComponent } from './error/error.component';
 
 const routes: Routes = [
   {
@@ -13,6 +14,8 @@ const routes: Routes = [
     path:"createTask",component:CreateTaskComponent
   },{
     path:"updateTask/:id",component:UpdateTaskComponent
+  },{
+    path:"**",component:ErrorComponent
   }
 ];
 
